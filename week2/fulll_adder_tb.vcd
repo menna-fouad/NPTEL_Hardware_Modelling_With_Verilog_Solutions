@@ -1,0 +1,148 @@
+$date
+	Mon Jun 29 20:27:14 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module full_adder_tb $end
+$var wire 2 ! sum [1:0] $end
+$var wire 1 " carry $end
+$var reg 1 # cin $end
+$var reg 2 $ x [1:0] $end
+$var reg 2 % y [1:0] $end
+$scope module DUT $end
+$var wire 2 & A [1:0] $end
+$var wire 2 ' B [1:0] $end
+$var wire 1 " Carry $end
+$var wire 1 # Cin $end
+$var wire 1 ( bit0_carry $end
+$var wire 1 ) bit1_sum1 $end
+$var wire 1 * bit1_carry2 $end
+$var wire 1 + bit1_carry1 $end
+$var wire 1 , bit0_sum1 $end
+$var wire 1 - bit0_carry2 $end
+$var wire 1 . bit0_carry1 $end
+$var wire 2 / Sum [1:0] $end
+$scope module add1 $end
+$var wire 1 . C $end
+$var wire 1 , S $end
+$var wire 1 0 X $end
+$var wire 1 1 Y $end
+$upscope $end
+$scope module add2 $end
+$var wire 1 - C $end
+$var wire 1 2 S $end
+$var wire 1 , X $end
+$var wire 1 # Y $end
+$upscope $end
+$scope module add3 $end
+$var wire 1 + C $end
+$var wire 1 ) S $end
+$var wire 1 3 X $end
+$var wire 1 4 Y $end
+$upscope $end
+$scope module add4 $end
+$var wire 1 * C $end
+$var wire 1 5 S $end
+$var wire 1 ) X $end
+$var wire 1 ( Y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x5
+x4
+x3
+x2
+x1
+x0
+bx /
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+bx '
+bx &
+bx %
+bx $
+x#
+x"
+bx !
+$end
+#5
+b1 !
+b1 /
+0"
+12
+05
+0*
+0(
+1,
+0.
+0)
+0+
+0-
+11
+04
+00
+03
+0#
+b1 %
+b1 '
+b0 $
+b0 &
+#10
+15
+b10 !
+b10 /
+1(
+02
+1-
+01
+10
+1#
+b0 %
+b0 '
+b1 $
+b1 &
+#15
+05
+b1 !
+b1 /
+0(
+12
+0-
+1"
+0,
+1+
+14
+00
+13
+b10 %
+b10 '
+b10 $
+b10 &
+#20
+0"
+b0 !
+b0 /
+0+
+02
+04
+03
+0#
+b0 %
+b0 '
+b0 $
+b0 &

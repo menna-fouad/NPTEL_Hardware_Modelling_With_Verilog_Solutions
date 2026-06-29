@@ -1,0 +1,132 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x100e2f670 .scope module, "full_adder_tb" "full_adder_tb" 2 1;
+ .timescale 0 0;
+v0x8c5074aa0_0 .net "carry", 0 0, L_0x100e37d30;  1 drivers
+v0x8c5074b40_0 .var "cin", 0 0;
+v0x8c5074be0_0 .net "sum", 1 0, L_0x8c5074dc0;  1 drivers
+v0x8c5074c80_0 .var "x", 1 0;
+v0x8c5074d20_0 .var "y", 1 0;
+S_0x100e2f7f0 .scope module, "DUT" "full_adder_2bit" 2 6, 3 1 0, S_0x100e2f670;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 2 "Sum";
+    .port_info 4 /OUTPUT 1 "Carry";
+L_0x100e378c0 .functor OR 1, L_0x100e2f970, L_0x100e377d0, C4<0>, C4<0>;
+L_0x100e37d30 .functor OR 1, L_0x100e379a0, L_0x100e37c40, C4<0>, C4<0>;
+v0x8c5074320_0 .net "A", 1 0, v0x8c5074c80_0;  1 drivers
+v0x8c50743c0_0 .net "B", 1 0, v0x8c5074d20_0;  1 drivers
+v0x8c5074460_0 .net "Carry", 0 0, L_0x100e37d30;  alias, 1 drivers
+v0x8c5074500_0 .net "Cin", 0 0, v0x8c5074b40_0;  1 drivers
+v0x8c50745a0_0 .net "Sum", 1 0, L_0x8c5074dc0;  alias, 1 drivers
+v0x8c5074640_0 .net "bit0_carry", 0 0, L_0x100e378c0;  1 drivers
+v0x8c50746e0_0 .net "bit0_carry1", 0 0, L_0x100e2f970;  1 drivers
+v0x8c5074780_0 .net "bit0_carry2", 0 0, L_0x100e377d0;  1 drivers
+v0x8c5074820_0 .net "bit0_sum1", 0 0, L_0x100e347e0;  1 drivers
+v0x8c50748c0_0 .net "bit1_carry1", 0 0, L_0x100e379a0;  1 drivers
+v0x8c5074960_0 .net "bit1_carry2", 0 0, L_0x100e37c40;  1 drivers
+v0x8c5074a00_0 .net "bit1_sum1", 0 0, L_0x100e37930;  1 drivers
+L_0x100e37610 .part v0x8c5074c80_0, 0, 1;
+L_0x100e376b0 .part v0x8c5074d20_0, 0, 1;
+L_0x100e37a10 .part v0x8c5074c80_0, 1, 1;
+L_0x100e37ab0 .part v0x8c5074d20_0, 1, 1;
+L_0x8c5074dc0 .concat8 [ 1 1 0 0], L_0x100e353b0, L_0x100e37b50;
+S_0x100e2fe30 .scope module, "add1" "half_adder" 3 8, 4 1 0, S_0x100e2f7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "X";
+    .port_info 1 /INPUT 1 "Y";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "C";
+L_0x100e347e0 .functor XOR 1, L_0x100e37610, L_0x100e376b0, C4<0>, C4<0>;
+L_0x100e2f970 .functor AND 1, L_0x100e37610, L_0x100e376b0, C4<1>, C4<1>;
+v0x100e34740_0 .net "C", 0 0, L_0x100e2f970;  alias, 1 drivers
+v0x100e343f0_0 .net "S", 0 0, L_0x100e347e0;  alias, 1 drivers
+v0x100e34490_0 .net "X", 0 0, L_0x100e37610;  1 drivers
+v0x100e35990_0 .net "Y", 0 0, L_0x100e376b0;  1 drivers
+S_0x100e2ffb0 .scope module, "add2" "half_adder" 3 9, 4 1 0, S_0x100e2f7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "X";
+    .port_info 1 /INPUT 1 "Y";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "C";
+L_0x100e353b0 .functor XOR 1, L_0x100e347e0, v0x8c5074b40_0, C4<0>, C4<0>;
+L_0x100e377d0 .functor AND 1, L_0x100e347e0, v0x8c5074b40_0, C4<1>, C4<1>;
+v0x100e2c8b0_0 .net "C", 0 0, L_0x100e377d0;  alias, 1 drivers
+v0x100e2c950_0 .net "S", 0 0, L_0x100e353b0;  1 drivers
+v0x100e2c9f0_0 .net "X", 0 0, L_0x100e347e0;  alias, 1 drivers
+v0x100e2ca90_0 .net "Y", 0 0, v0x8c5074b40_0;  alias, 1 drivers
+S_0x100e371d0 .scope module, "add3" "half_adder" 3 13, 4 1 0, S_0x100e2f7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "X";
+    .port_info 1 /INPUT 1 "Y";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "C";
+L_0x100e37930 .functor XOR 1, L_0x100e37a10, L_0x100e37ab0, C4<0>, C4<0>;
+L_0x100e379a0 .functor AND 1, L_0x100e37a10, L_0x100e37ab0, C4<1>, C4<1>;
+v0x100e2cb30_0 .net "C", 0 0, L_0x100e379a0;  alias, 1 drivers
+v0x100e37350_0 .net "S", 0 0, L_0x100e37930;  alias, 1 drivers
+v0x100e373f0_0 .net "X", 0 0, L_0x100e37a10;  1 drivers
+v0x8c5074000_0 .net "Y", 0 0, L_0x100e37ab0;  1 drivers
+S_0x100e37490 .scope module, "add4" "half_adder" 3 14, 4 1 0, S_0x100e2f7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "X";
+    .port_info 1 /INPUT 1 "Y";
+    .port_info 2 /OUTPUT 1 "S";
+    .port_info 3 /OUTPUT 1 "C";
+L_0x100e37b50 .functor XOR 1, L_0x100e37930, L_0x100e378c0, C4<0>, C4<0>;
+L_0x100e37c40 .functor AND 1, L_0x100e37930, L_0x100e378c0, C4<1>, C4<1>;
+v0x8c50740a0_0 .net "C", 0 0, L_0x100e37c40;  alias, 1 drivers
+v0x8c5074140_0 .net "S", 0 0, L_0x100e37b50;  1 drivers
+v0x8c50741e0_0 .net "X", 0 0, L_0x100e37930;  alias, 1 drivers
+v0x8c5074280_0 .net "Y", 0 0, L_0x100e378c0;  alias, 1 drivers
+    .scope S_0x100e2f670;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "fulll_adder_tb.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x100e2f670 {0 0 0};
+    %vpi_call 2 11 "$monitor", $time, " x = %d, y = %d, cin = %d, sum = %d, carry = %d", v0x8c5074c80_0, v0x8c5074d20_0, v0x8c5074b40_0, v0x8c5074be0_0, v0x8c5074aa0_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x8c5074c80_0, 0, 2;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x8c5074d20_0, 0, 2;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x8c5074b40_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x8c5074c80_0, 0, 2;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x8c5074d20_0, 0, 2;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x8c5074b40_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x8c5074c80_0, 0, 2;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x8c5074d20_0, 0, 2;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x8c5074b40_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x8c5074c80_0, 0, 2;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x8c5074d20_0, 0, 2;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x8c5074b40_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "week2_q2_tb.v";
+    "week2_q2.v";
+    "week2_q1.v";
