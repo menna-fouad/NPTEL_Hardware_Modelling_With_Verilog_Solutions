@@ -1,0 +1,47 @@
+$date
+	Fri Jul  3 10:30:37 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bcd_encoder_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " enable $end
+$var reg 10 # in [9:0] $end
+$scope module DUT $end
+$var wire 1 " enable $end
+$var wire 10 $ in [9:0] $end
+$var reg 4 % out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 %
+b10 $
+b10 #
+1"
+b1 !
+$end
+#5
+b100 !
+b100 %
+b10000 #
+b10000 $
+#10
+b1000 !
+b1000 %
+b100000000 #
+b100000000 $
+#15
+b11 !
+b11 %
+b1000 #
+b1000 $
+#20

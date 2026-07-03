@@ -1,0 +1,108 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x100c83cf0 .scope module, "comparator_tb" "comparator_tb" 2 2;
+ .timescale 0 0;
+UDP_udpcomparator .udp/comb "udpcomparator", 6
+ ,"1??0??1"
+ ,"0??1??0"
+ ,"01?00?1"
+ ,"00?01?0"
+ ,"11?10?1"
+ ,"10?11?0"
+ ,"0010001"
+ ,"0000010"
+ ,"0110101"
+ ,"0100110"
+ ,"1011001"
+ ,"1001010"
+ ,"1111101"
+ ,"1101110"
+ ,"0000000"
+ ,"0010010"
+ ,"0100100"
+ ,"0110110"
+ ,"1001000"
+ ,"1011010"
+ ,"1101100"
+ ,"1111110";
+L_0x100c84190 .udp UDP_udpcomparator, v0x100c7d460_0, v0x100c7d500_0, v0x100c83e70_0, v0x100c83f10_0, v0x100c83fb0_0, v0x100c84050_0;
+v0x100c7d460_0 .var "A1", 0 0;
+v0x100c7d500_0 .var "A2", 0 0;
+v0x100c83e70_0 .var "A3", 0 0;
+v0x100c83f10_0 .var "B1", 0 0;
+v0x100c83fb0_0 .var "B2", 0 0;
+v0x100c84050_0 .var "B3", 0 0;
+v0x100c840f0_0 .net "C", 0 0, L_0x100c84190;  1 drivers
+    .scope S_0x100c83cf0;
+T_0 ;
+    %vpi_call 2 8 "$monitor", $time, " A = %b%b%b, B = %b%b%b, C = %b", v0x100c7d460_0, v0x100c7d500_0, v0x100c83e70_0, v0x100c83f10_0, v0x100c83fb0_0, v0x100c84050_0, v0x100c840f0_0 {0 0 0};
+    %vpi_call 2 9 "$dumpfile", "comparator_tb.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x100c83cf0 {0 0 0};
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c7d460_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c7d500_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83f10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c83fb0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c84050_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c7d460_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c7d500_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83e70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c83f10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c83fb0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c84050_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c7d460_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c7d500_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c83e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83f10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83fb0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c84050_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c7d460_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c7d500_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x100c83e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83f10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c83fb0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x100c84050_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "week4_q1_tb.v";
