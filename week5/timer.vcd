@@ -1,0 +1,94 @@
+$date
+	Fri Jul 10 14:58:53 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module timer_tb $end
+$var wire 1 ! x $end
+$var reg 1 " b $end
+$var reg 1 # clk $end
+$scope module timer $end
+$var wire 1 " b $end
+$var wire 1 # clk $end
+$var parameter 2 $ Off $end
+$var parameter 2 % On1 $end
+$var parameter 2 & On2 $end
+$var parameter 2 ' On3 $end
+$var reg 2 ( PS [1:0] $end
+$var reg 1 ! x $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 '
+b10 &
+b1 %
+b0 $
+$end
+#0
+$dumpvars
+b0 (
+0#
+0"
+0!
+$end
+#5
+1#
+#10
+0#
+1"
+#15
+1!
+b1 (
+1#
+#20
+0#
+#25
+b10 (
+1#
+#30
+0#
+0"
+#35
+b11 (
+1#
+#40
+0#
+#45
+0!
+b0 (
+1#
+#50
+0#
+#55
+1#
+#60
+0#
+1"
+#65
+1!
+b1 (
+1#
+#70
+0#
+#75
+b10 (
+1#
+#80
+0#
+#85
+b11 (
+1#
+#90
+0#
+#95
+0!
+b0 (
+1#
+#100
+0#

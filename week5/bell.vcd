@@ -1,0 +1,67 @@
+$date
+	Fri Jul 10 15:28:39 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bell_tb $end
+$var wire 1 ! e $end
+$var reg 1 " clk $end
+$var reg 1 # y $end
+$scope module bell $end
+$var wire 1 " clk $end
+$var wire 1 # y $end
+$var parameter 1 $ A $end
+$var parameter 1 % B $end
+$var reg 1 & NS $end
+$var reg 1 ' PS $end
+$var reg 1 ! e $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+1%
+0$
+$end
+#0
+$dumpvars
+0'
+0&
+1#
+0"
+0!
+$end
+#5
+1"
+#10
+1&
+1!
+0"
+0#
+#15
+0!
+1'
+1"
+#20
+0"
+#25
+1"
+#30
+0&
+1!
+0"
+1#
+#35
+0!
+0'
+1"
+#40
+0"
+#45
+1"
+#50
+0"
