@@ -1,0 +1,363 @@
+$date
+	Wed Jul 15 15:30:53 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module sum_series_tb $end
+$var wire 1 ! stop $end
+$var wire 1 " load_r $end
+$var wire 1 # load_n $end
+$var wire 1 $ inc $end
+$var wire 1 % clear $end
+$var wire 1 & CltN $end
+$var reg 1 ' clk $end
+$var reg 8 ( data [7:0] $end
+$var reg 1 ) start $end
+$scope module controller $end
+$var wire 1 ) Start $end
+$var wire 1 ' clk $end
+$var wire 1 & CltN $end
+$var parameter 2 * S0 $end
+$var parameter 2 + S1 $end
+$var parameter 2 , S2 $end
+$var parameter 2 - S3 $end
+$var reg 1 % Clear $end
+$var reg 1 $ IncC $end
+$var reg 1 # LoadN $end
+$var reg 1 " LoadR $end
+$var reg 1 ! Stop $end
+$var reg 2 . state [1:0] $end
+$upscope $end
+$scope module datapath $end
+$var wire 1 % Clear $end
+$var wire 8 / Data_in [7:0] $end
+$var wire 1 $ IncC $end
+$var wire 1 # LoadN $end
+$var wire 1 " LoadR $end
+$var wire 1 ' clk $end
+$var wire 8 0 res [7:0] $end
+$var wire 8 1 R [7:0] $end
+$var wire 8 2 N [7:0] $end
+$var wire 1 & CltN $end
+$var wire 8 3 C [7:0] $end
+$scope module NRegister $end
+$var wire 1 % clear $end
+$var wire 1 ' clk $end
+$var wire 8 4 data_in [7:0] $end
+$var wire 1 # load $end
+$var reg 8 5 out [7:0] $end
+$upscope $end
+$scope module RRegister $end
+$var wire 1 % clear $end
+$var wire 1 ' clk $end
+$var wire 8 6 data_in [7:0] $end
+$var wire 1 " load $end
+$var reg 8 7 out [7:0] $end
+$upscope $end
+$scope module count $end
+$var wire 1 % clear $end
+$var wire 1 ' clk $end
+$var wire 1 $ inc $end
+$var reg 8 8 out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 -
+b10 ,
+b1 +
+b0 *
+$end
+#0
+$dumpvars
+bx 8
+bx 7
+bx 6
+bx 5
+b100 4
+bx 3
+bx 2
+bx 1
+bx 0
+b100 /
+bx .
+x)
+b100 (
+0'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#5
+0!
+0$
+1%
+0"
+0#
+b0 .
+1'
+#10
+b0 3
+b0 8
+0'
+1)
+#15
+1#
+0%
+b1 .
+b0 0
+b0 6
+b0 1
+b0 7
+1&
+b0 2
+b0 5
+1'
+#20
+0'
+0)
+#25
+1$
+1"
+0#
+0&
+b100 2
+b100 5
+b10 .
+1'
+#30
+b1 0
+b1 6
+b1 3
+b1 8
+0'
+#35
+b10 0
+b10 6
+b1 1
+b1 7
+1'
+#40
+b11 0
+b11 6
+b10 3
+b10 8
+0'
+#45
+b101 0
+b101 6
+b11 1
+b11 7
+1'
+#50
+b110 0
+b110 6
+b11 3
+b11 8
+0'
+#55
+b1001 0
+b1001 6
+b110 1
+b110 7
+1'
+#60
+1&
+b1010 0
+b1010 6
+b100 3
+b100 8
+0'
+#65
+1!
+0$
+0"
+b1110 0
+b1110 6
+b1010 1
+b1010 7
+b11 .
+1'
+#70
+0'
+#75
+1'
+#80
+0'
+#85
+1'
+#90
+0'
+#95
+1'
+#100
+0'
+#105
+1'
+#110
+0'
+#115
+1'
+#120
+0'
+#125
+1'
+#130
+0'
+#135
+1'
+#140
+0'
+#145
+1'
+#150
+0'
+#155
+1'
+#160
+0'
+#165
+1'
+#170
+0'
+#175
+1'
+#180
+0'
+#185
+1'
+#190
+0'
+#195
+1'
+#200
+0'
+#205
+1'
+#210
+0'
+#215
+1'
+#220
+0'
+#225
+1'
+#230
+0'
+#235
+1'
+#240
+0'
+#245
+1'
+#250
+0'
+#255
+1'
+#260
+0'
+#265
+1'
+#270
+0'
+#275
+1'
+#280
+0'
+#285
+1'
+#290
+0'
+#295
+1'
+#300
+0'
+#305
+1'
+#310
+0'
+#315
+1'
+#320
+0'
+#325
+1'
+#330
+0'
+#335
+1'
+#340
+0'
+#345
+1'
+#350
+0'
+#355
+1'
+#360
+0'
+#365
+1'
+#370
+0'
+#375
+1'
+#380
+0'
+#385
+1'
+#390
+0'
+#395
+1'
+#400
+0'
+#405
+1'
+#410
+0'
+#415
+1'
+#420
+0'
+#425
+1'
+#430
+0'
+#435
+1'
+#440
+0'
+#445
+1'
+#450
+0'
+#455
+1'
+#460
+0'
+#465
+1'
+#470
+0'
+#475
+1'
+#480
+0'
+#485
+1'
+#490
+0'
+#495
+1'
+#500
+0'
