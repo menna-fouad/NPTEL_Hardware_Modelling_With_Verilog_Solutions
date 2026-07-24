@@ -1,0 +1,473 @@
+$date
+	Thu Jul 23 20:11:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module pipeline_tb $end
+$var wire 8 ! Sum [7:0] $end
+$var wire 1 " Cout $end
+$var reg 1 # Cin $end
+$var reg 8 $ X [7:0] $end
+$var reg 8 % Y [7:0] $end
+$var reg 1 & clk $end
+$scope module adder $end
+$var wire 1 # Cin $end
+$var wire 1 " Cout $end
+$var wire 8 ' Sum [7:0] $end
+$var wire 8 ( X [7:0] $end
+$var wire 8 ) Y [7:0] $end
+$var wire 1 & clk $end
+$var wire 2 * sum3 [1:0] $end
+$var wire 2 + sum2 [1:0] $end
+$var wire 2 , sum1 [1:0] $end
+$var wire 2 - sum0 [1:0] $end
+$var wire 1 . carry4 $end
+$var wire 1 / carry3 $end
+$var wire 1 0 carry2 $end
+$var wire 1 1 carry1 $end
+$var reg 8 2 L12_X [7:0] $end
+$var reg 8 3 L12_Y [7:0] $end
+$var reg 1 4 L12_carry $end
+$var reg 2 5 L12_sum [1:0] $end
+$var reg 8 6 L23_X [7:0] $end
+$var reg 8 7 L23_Y [7:0] $end
+$var reg 1 8 L23_carry $end
+$var reg 4 9 L23_sum [3:0] $end
+$var reg 8 : L34_X [7:0] $end
+$var reg 8 ; L34_Y [7:0] $end
+$var reg 1 < L34_carry $end
+$var reg 6 = L34_sum [5:0] $end
+$var reg 1 > L45_carry $end
+$var reg 8 ? L45_sum [7:0] $end
+$scope module adder0 $end
+$var wire 2 @ A [1:0] $end
+$var wire 2 A B [1:0] $end
+$var wire 1 # C $end
+$var wire 2 B Sum [1:0] $end
+$var wire 1 1 Cout $end
+$var integer 32 C k [31:0] $end
+$scope function sum_carry $end
+$var reg 2 D A [1:0] $end
+$var reg 2 E B [1:0] $end
+$var reg 1 F C1 $end
+$var reg 1 G C2 $end
+$var reg 1 H C_in $end
+$var reg 1 I G0 $end
+$var reg 1 J G1 $end
+$var reg 1 K P0 $end
+$var reg 1 L P1 $end
+$var reg 5 M k [4:0] $end
+$upscope $end
+$upscope $end
+$scope module adder1 $end
+$var wire 2 N A [1:0] $end
+$var wire 2 O B [1:0] $end
+$var wire 1 4 C $end
+$var wire 2 P Sum [1:0] $end
+$var wire 1 0 Cout $end
+$var integer 32 Q k [31:0] $end
+$scope function sum_carry $end
+$var reg 2 R A [1:0] $end
+$var reg 2 S B [1:0] $end
+$var reg 1 T C1 $end
+$var reg 1 U C2 $end
+$var reg 1 V C_in $end
+$var reg 1 W G0 $end
+$var reg 1 X G1 $end
+$var reg 1 Y P0 $end
+$var reg 1 Z P1 $end
+$var reg 5 [ k [4:0] $end
+$upscope $end
+$upscope $end
+$scope module adder2 $end
+$var wire 2 \ A [1:0] $end
+$var wire 2 ] B [1:0] $end
+$var wire 1 8 C $end
+$var wire 2 ^ Sum [1:0] $end
+$var wire 1 / Cout $end
+$var integer 32 _ k [31:0] $end
+$scope function sum_carry $end
+$var reg 2 ` A [1:0] $end
+$var reg 2 a B [1:0] $end
+$var reg 1 b C1 $end
+$var reg 1 c C2 $end
+$var reg 1 d C_in $end
+$var reg 1 e G0 $end
+$var reg 1 f G1 $end
+$var reg 1 g P0 $end
+$var reg 1 h P1 $end
+$var reg 5 i k [4:0] $end
+$upscope $end
+$upscope $end
+$scope module adder3 $end
+$var wire 2 j A [1:0] $end
+$var wire 2 k B [1:0] $end
+$var wire 1 < C $end
+$var wire 2 l Sum [1:0] $end
+$var wire 1 . Cout $end
+$var integer 32 m k [31:0] $end
+$scope function sum_carry $end
+$var reg 2 n A [1:0] $end
+$var reg 2 o B [1:0] $end
+$var reg 1 p C1 $end
+$var reg 1 q C2 $end
+$var reg 1 r C_in $end
+$var reg 1 s G0 $end
+$var reg 1 t G1 $end
+$var reg 1 u P0 $end
+$var reg 1 v P1 $end
+$var reg 5 w k [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope task check $end
+$var reg 8 x a [7:0] $end
+$var reg 8 y b [7:0] $end
+$var reg 1 z c_in $end
+$var reg 1 { c_out $end
+$var reg 9 | expected [8:0] $end
+$var reg 8 } sum [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx }
+bx |
+x{
+xz
+bx y
+bx x
+b11111 w
+0v
+0u
+1t
+1s
+1r
+1q
+1p
+b11 o
+b11 n
+b100000 m
+bx l
+bx k
+bx j
+b11111 i
+0h
+0g
+1f
+1e
+1d
+1c
+1b
+b11 a
+b11 `
+b100000 _
+bx ^
+bx ]
+bx \
+b11111 [
+0Z
+0Y
+1X
+1W
+1V
+1U
+1T
+b11 S
+b11 R
+b100000 Q
+bx P
+bx O
+bx N
+b11111 M
+0L
+0K
+1J
+1I
+1H
+1G
+1F
+b11 E
+b11 D
+b100000 C
+bx B
+bx A
+bx @
+bx ?
+x>
+bx =
+x<
+bx ;
+bx :
+bx 9
+x8
+bx 7
+bx 6
+bx 5
+x4
+bx 3
+bx 2
+x1
+x0
+x/
+x.
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+0&
+bx %
+bx $
+x#
+x"
+bx !
+$end
+#2
+01
+b1 -
+b1 B
+b0 A
+b0 @
+1#
+b0 %
+b0 )
+b0 $
+b0 (
+#5
+b0 O
+b0 N
+b0 3
+b0 2
+1&
+#7
+00
+b0 ,
+b0 P
+04
+#8
+b1 5
+#10
+0&
+#12
+b0 -
+b0 B
+0#
+b10100000 %
+b10100000 )
+b10000000 $
+b10000000 (
+#15
+b0 ]
+b0 \
+b0 7
+b0 6
+b10100000 3
+b10000000 2
+1&
+#17
+0/
+b0 +
+b0 ^
+08
+#18
+b1 9
+b0 5
+#20
+0&
+#22
+b100000 %
+b100000 )
+b1000000 $
+b1000000 (
+#25
+b10 +
+b10 ^
+b10 ]
+b0 k
+b0 j
+b100000 3
+b1000000 2
+b10100000 7
+b10000000 6
+b0 ;
+b0 :
+1&
+#27
+0.
+b0 *
+b0 l
+0<
+#28
+b0 9
+b1 =
+#30
+0&
+#32
+b1 -
+b1 B
+1#
+b10000000 %
+b10000000 )
+b11000000 $
+b11000000 (
+#35
+1.
+b10 k
+b10 j
+b10100000 ;
+b10000000 :
+b100000 7
+b1000000 6
+b10000000 3
+b11000000 2
+1&
+#37
+0"
+0>
+#38
+b1 !
+b1 '
+b1 ?
+b100000 =
+b1 5
+#40
+0&
+#45
+b0 +
+b0 ^
+0.
+b1 *
+b1 l
+b0 ]
+b0 k
+b1 j
+b10000000 7
+b11000000 6
+b100000 ;
+b1000000 :
+1&
+#47
+1"
+1>
+b1 |
+0{
+b1 }
+1z
+b0 y
+b0 x
+#48
+b1 9
+b100000 !
+b100000 '
+b100000 ?
+#50
+0&
+#55
+1.
+b10 k
+b11 j
+b10000000 ;
+b11000000 :
+1&
+#57
+0"
+0>
+b100100000 |
+1{
+b100000 }
+0z
+b10100000 y
+b10000000 x
+#58
+b1100000 !
+b1100000 '
+b1100000 ?
+b1 =
+#60
+0&
+#65
+1&
+#67
+1"
+1>
+b1100000 |
+0{
+b1100000 }
+b100000 y
+b1000000 x
+#68
+b1000001 !
+b1000001 '
+b1000001 ?
+#70
+0&
+#75
+1&
+#77
+b101000001 |
+1{
+b1000001 }
+1z
+b10000000 y
+b11000000 x
+#80
+0&
+#85
+1&
+#90
+0&
+#95
+1&
+#100
+0&
+#105
+1&
+#110
+0&
+#115
+1&
+#120
+0&
+#125
+1&
+#130
+0&
+#135
+1&
+#140
+0&
+#145
+1&
+#150
+0&
+#155
+1&
+#160
+0&
+#165
+1&
+#170
+0&
+#175
+1&
+#180
+0&
+#185
+1&
+#190
+0&
+#195
+1&
+#200
+0&
