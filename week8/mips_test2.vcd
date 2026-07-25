@@ -1,0 +1,455 @@
+$date
+	Sat Jul 25 16:33:53 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench2 $end
+$var reg 1 ! clk1 $end
+$var reg 1 " clk2 $end
+$var integer 32 # k [31:0] $end
+$scope module processor $end
+$var wire 1 ! clk1 $end
+$var wire 1 " clk2 $end
+$var parameter 6 $ ADD $end
+$var parameter 6 % ADDI $end
+$var parameter 6 & AND $end
+$var parameter 6 ' BEQZ $end
+$var parameter 6 ( BNEQZ $end
+$var parameter 3 ) BRANCH $end
+$var parameter 3 * HALT $end
+$var parameter 6 + HLT $end
+$var parameter 3 , I $end
+$var parameter 6 - J $end
+$var parameter 3 . JUMP $end
+$var parameter 3 / LOAD $end
+$var parameter 6 0 LW $end
+$var parameter 6 1 MUL $end
+$var parameter 6 2 OR $end
+$var parameter 3 3 R $end
+$var parameter 6 4 SLT $end
+$var parameter 6 5 SLTI $end
+$var parameter 3 6 STORE $end
+$var parameter 6 7 SUB $end
+$var parameter 6 8 SUBI $end
+$var parameter 6 9 SW $end
+$var reg 32 : EX_MEM_ALU_OUT [31:0] $end
+$var reg 32 ; EX_MEM_B [31:0] $end
+$var reg 1 < EX_MEM_COND $end
+$var reg 32 = EX_MEM_IR [31:0] $end
+$var reg 3 > EX_MEM_TYPE [2:0] $end
+$var reg 1 ? HALTED $end
+$var reg 32 @ ID_EX_A [31:0] $end
+$var reg 32 A ID_EX_B [31:0] $end
+$var reg 32 B ID_EX_IMM [31:0] $end
+$var reg 32 C ID_EX_IR [31:0] $end
+$var reg 32 D ID_EX_NPC [31:0] $end
+$var reg 3 E ID_EX_TYPE [2:0] $end
+$var reg 32 F IF_ID_IR [31:0] $end
+$var reg 32 G IF_ID_NPC [31:0] $end
+$var reg 32 H MEM_WB_ALU_OUT [31:0] $end
+$var reg 32 I MEM_WB_IR [31:0] $end
+$var reg 32 J MEM_WB_LMD [31:0] $end
+$var reg 3 K MEM_WB_TYPE [2:0] $end
+$var reg 32 L PC [31:0] $end
+$var reg 1 M TAKEN_BRANCH $end
+$upscope $end
+$scope task check $end
+$var reg 32 N expected [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1001 9
+b1011 8
+b1 7
+b11 6
+b1100 5
+b100 4
+b0 3
+b11 2
+b101 1
+b1000 0
+b10 /
+b101 .
+b10000 -
+b1 ,
+b111111 +
+b110 *
+b100 )
+b1101 (
+b1110 '
+b10 &
+b1010 %
+b0 $
+$end
+#0
+$dumpvars
+bx N
+0M
+b0 L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+0?
+bx >
+bx =
+x<
+bx ;
+bx :
+b100000 #
+0"
+0!
+$end
+#5
+b1 L
+b1 G
+b101000000000010000000001111000 F
+1!
+#10
+0!
+#15
+b1 E
+b1111000 B
+b1 A
+b0 @
+b1 D
+b101000000000010000000001111000 C
+1"
+#20
+0"
+#25
+b1111000 :
+b1 ;
+b101000000000010000000001111000 =
+b1 >
+b10 L
+b10 G
+b1100110001100011000000000000 F
+1!
+#30
+0!
+#35
+b1111000 H
+b1 K
+b101000000000010000000001111000 I
+b0 E
+b11000000000000 B
+b110 A
+b110 @
+b10 D
+b1100110001100011000000000000 C
+1"
+#40
+0"
+#45
+b11 L
+b11 G
+b100000001000100000000000000000 F
+b110 :
+b110 ;
+b1100110001100011000000000000 =
+b0 >
+1!
+#50
+0!
+#55
+b10 E
+b0 B
+b10 A
+b1111000 @
+b11 D
+b100000001000100000000000000000 C
+b110 H
+b0 K
+b1100110001100011000000000000 I
+1"
+#60
+0"
+#65
+b1111000 :
+b10 ;
+b100000001000100000000000000000 =
+b10 >
+b100 L
+b100 G
+b1100110001100011000000000000 F
+1!
+#70
+0!
+#75
+b1010101 J
+b10 K
+b100000001000100000000000000000 I
+b0 E
+b11000000000000 B
+b110 A
+b110 @
+b100 D
+b1100110001100011000000000000 C
+1"
+#80
+0"
+#85
+b101 L
+b101 G
+b101000010000110000000000101101 F
+b110 :
+b110 ;
+b1100110001100011000000000000 =
+b0 >
+1!
+#90
+0!
+#95
+b1 E
+b101101 B
+b11 A
+b1010101 @
+b101 D
+b101000010000110000000000101101 C
+b0 K
+b1100110001100011000000000000 I
+1"
+#100
+0"
+#105
+b10000010 :
+b11 ;
+b101000010000110000000000101101 =
+b1 >
+b110 L
+b110 G
+b1100110001100011000000000000 F
+1!
+#110
+0!
+#115
+b10000010 H
+b1 K
+b101000010000110000000000101101 I
+b0 E
+b11000000000000 B
+b110 A
+b110 @
+b110 D
+b1100110001100011000000000000 C
+1"
+#120
+0"
+#125
+b111 L
+b111 G
+b100100001000110000000000000001 F
+b110 :
+b110 ;
+b1100110001100011000000000000 =
+b0 >
+1!
+#130
+0!
+#135
+b11 E
+b1 B
+b10000010 A
+b1111000 @
+b111 D
+b100100001000110000000000000001 C
+b110 H
+b0 K
+b1100110001100011000000000000 I
+1"
+#140
+0"
+#145
+b1111001 :
+b10000010 ;
+b100100001000110000000000000001 =
+b11 >
+b1000 L
+b1000 G
+b11111100000000000000000000000000 F
+1!
+#150
+0!
+#155
+b11 K
+b100100001000110000000000000001 I
+b110 E
+b0 B
+b0 A
+b0 @
+b1000 D
+b11111100000000000000000000000000 C
+1"
+#160
+0"
+#165
+b1001 L
+b1001 G
+bx F
+b0 ;
+b11111100000000000000000000000000 =
+b110 >
+1!
+#170
+0!
+#175
+bx B
+bx A
+bx @
+b1001 D
+bx C
+b110 K
+b11111100000000000000000000000000 I
+1"
+#180
+0"
+#185
+1?
+bx ;
+bx =
+b1010 L
+b1010 G
+1!
+#190
+0!
+#195
+1"
+#200
+0"
+#205
+1!
+#210
+0!
+#215
+1"
+#220
+0"
+#225
+1!
+#230
+0!
+#235
+1"
+#240
+0"
+#245
+1!
+#250
+0!
+#255
+1"
+#260
+0"
+#265
+1!
+#270
+0!
+#275
+1"
+#280
+0"
+#285
+1!
+#290
+0!
+#295
+1"
+#300
+0"
+#305
+1!
+#310
+0!
+#315
+1"
+#320
+0"
+#325
+1!
+#330
+0!
+#335
+1"
+#340
+0"
+#345
+1!
+#350
+0!
+#355
+1"
+#360
+0"
+#365
+1!
+#370
+0!
+#375
+1"
+#380
+0"
+#385
+1!
+#390
+0!
+#395
+1"
+#400
+0"
+#405
+1!
+#410
+0!
+#415
+1"
+#420
+0"
+#425
+1!
+#430
+0!
+#435
+1"
+#440
+0"
+#445
+1!
+#450
+0!
+#455
+1"
+#460
+0"
+#465
+1!
+#470
+0!
+#475
+1"
+#480
+0"
+#485
+1!
+#490
+0!
+#495
+1"
+#500
+0"
+b10000010 N
+#600
