@@ -88,7 +88,7 @@ module MIPS32 # (
                         SUB : EX_MEM_ALU_OUT <= ID_EX_A - ID_EX_B;
                         AND : EX_MEM_ALU_OUT <= ID_EX_A & ID_EX_B;
                         OR  : EX_MEM_ALU_OUT <= ID_EX_A | ID_EX_B;
-                        SLT : EX_MEM_ALU_OUT <= ID_EX_A < ID_EX_B;
+                        SLT : EX_MEM_ALU_OUT <= {31'b0, ID_EX_A < ID_EX_B};
                         MUL : EX_MEM_ALU_OUT <= ID_EX_A * ID_EX_B;
                         default : EX_MEM_ALU_OUT <= 32'hxxxxxxxx;
                     endcase
@@ -98,7 +98,7 @@ module MIPS32 # (
                     case (ID_EX_IR[31:26])
                         ADDI : EX_MEM_ALU_OUT <= ID_EX_A + ID_EX_IMM;
                         SUBI : EX_MEM_ALU_OUT <= ID_EX_A - ID_EX_IMM;
-                        SLTI : EX_MEM_ALU_OUT <= ID_EX_A < ID_EX_B;
+                        SLTI : EX_MEM_ALU_OUT <= {31'b0, ID_EX_A < ID_EX_B};
                         default: EX_MEM_ALU_OUT <= 32'hxxxxxxxx;
                     endcase
                 end
@@ -115,6 +115,8 @@ module MIPS32 # (
                 JUMP : begin
                     EX_MEM_ALU_OUT <= ID_EX_NPC + ID_EX_IMM;
                 end
+
+                default : EX_MEM_ALU_OUT <= 32'hxxxx;
             endcase
         end
     end
@@ -130,6 +132,7 @@ module MIPS32 # (
                 R, I : MEM_WB_ALU_OUT <= EX_MEM_ALU_OUT;
                 LOAD : MEM_WB_LMD <= mem[EX_MEM_ALU_OUT];
                 STORE : if (!TAKEN_BRANCH) mem[EX_MEM_ALU_OUT] <= EX_MEM_B;
+                default : ;
             endcase
         end
     end
@@ -142,6 +145,7 @@ module MIPS32 # (
                 I : if (MEM_WB_IR[20:16] != 0) reg_file[MEM_WB_IR[20:16]] <= MEM_WB_ALU_OUT;
                 LOAD : if (MEM_WB_IR[20:16] != 0) reg_file[MEM_WB_IR[20:16]] <= MEM_WB_LMD;
                 HALT : HALTED <= 1'b1;
+                default : ;
             endcase
         end
     end
