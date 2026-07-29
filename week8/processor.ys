@@ -1,0 +1,42 @@
+// Expansion of running the command synth_xilinx
+
+// `begin` stage
+read_verilog -icells -lib +/xilinx/cells_sim.v -family xc7
+read_verilog -lib +/xilinx/cells_xtra.v
+// Loads the xilinx cell models allowing us to include platform specific IP blocks
+
+hierarchy -check -top MIPS32 // Sets the top module to MIPS32
+
+// `prepare` stage
+
+proc
+flatten  // flattens module hierarchy to one flat module for easier optimization
+tribuf -logic  // converts tri-state 'z' logic to logic that can be mapped to our FPGA 
+// (not relevant to our code since we don't use the high-impedence satte)
+deminout // removes inout constructs because it is expensive
+// demoting inout ports to either input or output reduces complecity (again not relevant to our code)
+
+opt_expr // performs constant folding (a cell has constant inputs is replaced with the constant value this cell drive)
+opt_clean // removes wires and cells that are now unused or unreachable
+check // passes over design to flag (not fix) structual bugs 
+// including wires with 0 or more than 1 driver, combination loops with feedback, etc.
+opt -nodffe -nosdff // general opt command that includes microcommands like opt_expr and opt_clean
+// -nodffe and -nosdff tells it not to infer clock-enable flip-flops or synchronous-reset flip-flops yet
+// This is handled by dfflegalize that mapes target devices to what hardware is available
+// For example, a if you have a plain DFF but the target library only has DFF with enable, the enable is permanently set to 1
+
+fsm // handles FSMs by calling the following commands:
+// fsm_detect (find candidate state registers)
+// fsm_extract (pull the pattern into an explicit $fsm cell)
+// fsm_opt (simplify/re-encode it)
+// fsm_expand (fold surrounding logic in)
+// fsm_map (turn it back into basic mux/register logic afterward, now optimized as a state machine rather than generic logic)
+
+opt // general optimization command with no flags this time
+wreduce [-keepdc]    (option for '-widemux') // narrows down values and operations to only the btis needed
+// -keepdc keeps don't cares rather than inferring their values
+peepopt // pattern-specific "peephole" optimizations not handled by generic optimizations in opt
+opt_clean // same as above (removes unused/unreachable wires & cells)
+muxpack        ('-widemux' only)
+pmux2shiftx    (skip if '-nosrl' and '-widemux=0')
+clean // alias for opt_clean
